@@ -1,6 +1,6 @@
 # Mohamed Ayman - Portfolio
 
-A high-end, production-grade portfolio website showcasing senior-level software engineering experience, architectural thinking, and business impact.
+A high-end, production-grade portfolio website showcasing my software engineering experience, architectural thinking, and business impact.
 
 ## 🚀 Tech Stack
 
@@ -134,7 +134,7 @@ npm run build
 
 ## 🎯 Key Features
 
-### Senior-Level Content
+### Content
 - Architecture-focused project descriptions
 - Business impact metrics
 - Trade-off analysis
