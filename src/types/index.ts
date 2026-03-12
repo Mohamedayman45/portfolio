@@ -22,13 +22,18 @@ export interface TechStack {
   languages: string[];
 }
 
+export interface ExperienceProject {
+  label: string;
+  href?: string;
+}
+
 export interface Experience {
   company: string;
   role: string;
   period?: string;
   startDate?: Date;
   location?: string;
-  projects: string[];
+  projects: ExperienceProject[];
   responsibilities: string[];
   technologies?: string[];
 }
@@ -38,6 +43,7 @@ export interface Project {
   title: string;
   category: string;
   description: string;
+  link?: string;
   businessProblem?: string;
   solution: string;
   technicalHighlights: string[];
