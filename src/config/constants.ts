@@ -6,7 +6,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   phone: '01029390241',
   linkedin: 'https://www.linkedin.com/in/mohamedayman45/',
   github: 'https://github.com/Mohamedayman45',
-  cv: 'https://drive.google.com/file/d/11rKvedOjDE5Pf3DBHA1r6G2wsJwVv8eo/view',
+  cv: 'https://drive.google.com/file/d/1FRgiBTEN_EIuwqAF0PYBEeKKAed_kNKb/view?usp=sharing',
 };
 
 export const EDUCATION: Education = {
@@ -29,7 +29,13 @@ export const EXPERIENCES: Experience[] = [
     company: 'LightByte',
     role: 'Backend Engineer',
     startDate: new Date('2024-10-15'),
-    projects: ['chat.qrena.com', 'opal-travel.lightbyte.me', 'darb-mea'],
+    projects: [
+      { label: 'chat.qrena.com', href: 'https://chat.qrena.com' },
+      { label: 'halfm.sa', href: 'https://halfm.sa' },
+      { label: 'darb-mea.com', href: 'https://darb-mea.com' },
+      { label: 'prop-cut.com', href: 'https://prop-cut.com' },
+      { label: 'opal-travel.lightbyte.me', href: 'https://opal-travel.lightbyte.me' },
+    ],
     responsibilities: [
       'Backend architecture design and implementation',
       'Performance optimization and bottleneck analysis',
@@ -43,7 +49,7 @@ export const EXPERIENCES: Experience[] = [
     role: 'Backend Engineer (Go)',
     startDate: new Date('2025-10-01'),
     location: 'Remote, Saudi Arabia',
-    projects: ['So Eat App'],
+    projects: [{ label: 'So Eat App' }],
     responsibilities: [
       'Implemented Domain Driven Design patterns',
       'Clean domain modeling and bounded contexts',
@@ -55,6 +61,80 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'qrena-chat',
+    title: 'QRENA Chat Platform',
+    category: 'Real-Time Messaging',
+    description: 'Real-time messaging platform across web and mobile.',
+    link: 'https://chat.qrena.com/',
+    solution: 'Built a real-time messaging platform using React.js, React Native, NestJS backend, and PostgreSQL. Implemented WebSocket-based messaging, message reactions, forwarding, and broadcast functionality. Developed authentication, RBAC, and notifications, optimized for scalability and low latency across web and mobile.',
+    technicalHighlights: [
+      'WebSocket-based real-time messaging',
+      'Message reactions, forwarding, and broadcast functionality',
+      'Authentication, RBAC, and notifications',
+      'Optimized for scalability and low latency across web and mobile',
+    ],
+    technologies: ['React.js', 'React Native', 'NestJS', 'PostgreSQL', 'WebSocket'],
+  },
+  {
+    id: 'half-million',
+    title: 'Half Million (halfm.sa)',
+    category: 'Full-Stack CMS',
+    description: 'CMS Website for Coffee Store (Saudi Arabia).',
+    link: 'https://halfm.sa/',
+    solution: 'Developed a Next.js frontend and NestJS backend with PostgreSQL for a major coffee chain\'s content management system. Implemented secure admin workflows, RESTful APIs, and database design for managing products, promotions, and store content efficiently.',
+    technicalHighlights: [
+      'Next.js frontend with NestJS backend and PostgreSQL',
+      'Secure admin workflows and role-based content management',
+      'RESTful APIs for products, promotions, and store content',
+      'Database design for efficient content and product management',
+    ],
+    technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'REST APIs'],
+  },
+  {
+    id: 'darb',
+    title: 'DARB – Hiking & Adventure App',
+    category: 'Mobile & Backend',
+    description: 'Hiking and outdoor adventure tracking app (UAE).',
+    link: 'https://darb-mea.com/',
+    solution: 'Created a React Native mobile app and Node.js backend with PostgreSQL database for hiking and outdoor adventure tracking. Implemented user tracking, route management, and activity logging, optimizing backend services for performance, reliability, and secure data handling.',
+    technicalHighlights: [
+      'React Native mobile app with Node.js backend and PostgreSQL',
+      'User tracking, route management, and activity logging',
+      'Backend services optimized for performance and reliability',
+      'Secure data handling and storage',
+    ],
+    technologies: ['React Native', 'Node.js', 'PostgreSQL'],
+  },
+  {
+    id: 'propcut',
+    title: 'PropCut – Real Estate Investment Platform',
+    category: 'Full-Stack Web',
+    description: 'Real estate investment and property platform (Proptech).',
+    link: 'https://prop-cut.com/',
+    solution: 'Developed a React.js frontend and NestJS backend with PostgreSQL database for a real estate investment platform. Implemented RESTful APIs, secure authentication, property search/filter functionality, and optimized for responsive design, performance, and user experience in the proptech domain.',
+    technicalHighlights: [
+      'React.js frontend with NestJS backend and PostgreSQL',
+      'RESTful APIs and secure authentication',
+      'Property search and filter functionality',
+      'Responsive design, performance, and UX optimization for proptech',
+    ],
+    technologies: ['React.js', 'NestJS', 'PostgreSQL', 'REST APIs'],
+  },
+  {
+    id: 'soeat-app',
+    title: 'SOEAT App – Food Ordering & POS Platform',
+    category: 'Full-Stack Platform',
+    description: 'Food ordering and point-of-sale platform for mobile, web, and in-store.',
+    solution: 'Built a full-stack platform with Golang backend (DDD, PostgreSQL), Next.js web frontend, React Native mobile app, and POS integration. Developed scalable APIs, order management workflows, and secure payment handling, ensuring smooth operations across mobile, web, and in-store POS systems.',
+    technicalHighlights: [
+      'Golang backend with Domain Driven Design and PostgreSQL',
+      'Next.js web frontend and React Native mobile app',
+      'POS integration for in-store operations',
+      'Scalable APIs, order management workflows, and secure payment handling',
+    ],
+    technologies: ['Go', 'Next.js', 'React Native', 'PostgreSQL', 'DDD'],
+  },
   {
     id: 'salonq',
     title: 'SalonQ App',

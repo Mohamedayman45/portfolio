@@ -21,11 +21,22 @@ export default function ProjectsSection() {
             <AnimatedSection key={project.id} delay={index * 0.1}>
               <Card hover>
                 <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-start justify-between mb-2">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
+                      <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <CardTitle as="h3">{project.title}</CardTitle>
                         <Badge variant="accent">{project.category}</Badge>
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+                          >
+                            <Icon name="external-link" size={16} />
+                            Visit site
+                          </a>
+                        )}
                       </div>
                       <p className="text-foreground-secondary">{project.description}</p>
                     </div>

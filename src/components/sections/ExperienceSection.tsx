@@ -57,8 +57,19 @@ export default function ExperienceSection() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {experience.projects.map((project) => (
-                        <Badge key={project} variant="primary">
-                          {project}
+                        <Badge key={project.label} variant="primary">
+                          {project.href ? (
+                            <a
+                              href={project.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline focus:underline"
+                            >
+                              {project.label}
+                            </a>
+                          ) : (
+                            project.label
+                          )}
                         </Badge>
                       ))}
                     </div>
