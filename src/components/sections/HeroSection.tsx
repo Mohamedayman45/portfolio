@@ -59,19 +59,30 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight flex flex-wrap justify-center gap-x-3 sm:gap-x-4"
           >
-            {PERSONAL_INFO.name.split('').map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
-                className="inline-block"
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))}
+            {PERSONAL_INFO.name.split(' ').map((word, wordIndex) => {
+              const charOffset = PERSONAL_INFO.name
+                .split(' ')
+                .slice(0, wordIndex)
+                .reduce((acc, w) => acc + w.length + 1, 0);
+
+              return (
+                <span key={wordIndex} className="inline-flex whitespace-nowrap">
+                  {word.split('').map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 + (charOffset + charIndex) * 0.05 }}
+                      className="inline-block"
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
+              );
+            })}
           </motion.h1>
 
           {/* Subtitle with gradient effect */}

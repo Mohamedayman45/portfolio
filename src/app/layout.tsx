@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Mohamed Ayman | Senior Software Engineer',
-  description: 'Senior Software Engineer specializing in backend architecture, event-driven systems, and security engineering. Experience with Node.js, Go, NestJS, and production-grade systems.',
+  title: 'Mohamed Ayman | Software Engineer',
+  description: 'Software Engineer specializing in backend architecture, event-driven systems, and security engineering. Experience with Node.js, Go, NestJS, and production-grade systems.',
   keywords: ['Software Engineer', 'Backend Engineer', 'Full Stack Developer', 'DevOps', 'Node.js', 'Go', 'NestJS', 'Event-Driven Architecture', 'Domain Driven Design', 'Cybersecurity'],
   authors: [{ name: 'Mohamed Ayman' }],
   creator: 'Mohamed Ayman',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://mohamedayman.dev',
-    title: 'Mohamed Ayman | Senior Software Engineer',
-    description: 'Senior Software Engineer specializing in backend architecture, event-driven systems, and security engineering.',
+    title: 'Mohamed Ayman | Software Engineer',
+    description: 'Software Engineer specializing in backend architecture, event-driven systems, and security engineering.',
     siteName: 'Mohamed Ayman Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mohamed Ayman | Senior Software Engineer',
-    description: 'Senior Software Engineer specializing in backend architecture, event-driven systems, and security engineering.',
+    title: 'Mohamed Ayman | Software Engineer',
+    description: 'Software Engineer specializing in backend architecture, event-driven systems, and security engineering.',
   },
   robots: {
     index: true,

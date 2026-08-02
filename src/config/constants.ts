@@ -228,7 +228,7 @@ export const ENGINEERING_PRINCIPLES: EngineeringPrinciple[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  headline: 'Senior Software Engineer',
+  headline: 'Software Engineer',
   subheadline: 'Backend-Heavy Full-Stack • DevOps • Security-Minded Architect',
   introduction: `I don't think in screens or endpoints. I think in systems. My work spans backend architecture, mobile platforms, and DevOps, with a strong focus on security principles (CIA: Confidentiality, Integrity, Availability). What defines my approach is how I connect technical decisions to business outcomes.`,
   paragraphs: [
