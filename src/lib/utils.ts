@@ -14,7 +14,6 @@ export function scrollToSection(sectionId: string) {
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: 'smooth',
     });
   }
 }

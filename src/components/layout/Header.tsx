@@ -28,7 +28,6 @@ export default function Header() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',
       });
       setIsMobileMenuOpen(false);
     }
@@ -49,7 +48,7 @@ export default function Header() {
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.scrollTo({ top: 0 });
             }}
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
           >
