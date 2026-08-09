@@ -31,13 +31,18 @@ interface SectionHeaderProps {
 export function SectionHeader({ title, subtitle, align = 'left', className }: SectionHeaderProps) {
   return (
     <div className={cn('mb-12', align === 'center' && 'text-center', className)}>
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+      <p className="font-mono text-xs uppercase tracking-[0.18em] text-primary mb-3">
         {title}
-      </h2>
+      </p>
       {subtitle && (
-        <p className="text-lg text-foreground-secondary max-w-2xl">
+        <h2
+          className={cn(
+            'font-serif text-2xl md:text-3xl font-medium tracking-tightish text-foreground max-w-2xl text-balance',
+            align === 'center' && 'mx-auto'
+          )}
+        >
           {subtitle}
-        </p>
+        </h2>
       )}
     </div>
   );

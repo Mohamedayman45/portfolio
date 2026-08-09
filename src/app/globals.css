@@ -6,18 +6,28 @@
   * {
     @apply border-border;
   }
-  
+
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-serif-italic {
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-style: italic;
   }
 }

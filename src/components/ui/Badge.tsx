@@ -8,14 +8,14 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 export default function Badge({ variant = 'default', className, children, ...props }: BadgeProps) {
   const variants = {
     default: 'bg-background-tertiary text-foreground-secondary border-border',
-    primary: 'bg-primary/10 text-primary border-primary/20',
-    accent: 'bg-accent/10 text-accent border-accent/20',
+    primary: 'bg-primary/10 text-primary border-primary/25',
+    accent: 'bg-primary/10 text-primary border-primary/25',
   };
 
   return (
     <span
       className={cn(
-        'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border',
+        'inline-flex items-center px-2.5 py-0.5 rounded text-[13px] font-medium border',
         variants[variant],
         className
       )}

@@ -10,60 +10,38 @@ const config: Config = {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#0a0a0a',
-          secondary: '#111111',
-          tertiary: '#1a1a1a',
+          DEFAULT: '#faf7f1',
+          secondary: '#f3eee4',
+          tertiary: '#ebe4d6',
         },
         foreground: {
-          DEFAULT: '#ffffff',
-          secondary: '#a3a3a3',
-          tertiary: '#737373',
+          DEFAULT: '#1c1917',
+          secondary: '#57534e',
+          tertiary: '#8a8278',
         },
         primary: {
-          DEFAULT: '#3b82f6',
-          hover: '#2563eb',
+          DEFAULT: '#b8553a',
+          hover: '#9c4630',
         },
         accent: {
-          DEFAULT: '#8b5cf6',
-          hover: '#7c3aed',
+          DEFAULT: '#b8553a',
+          hover: '#9c4630',
         },
         border: {
-          DEFAULT: '#262626',
-          hover: '#404040',
+          DEFAULT: '#e5dfd6',
+          hover: '#c9bfb0',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'monospace'],
+        serif: ['var(--font-newsreader)', 'Georgia', 'serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'slide-down': 'slideDown 0.6s ease-out',
-        'scale-in': 'scaleIn 0.4s ease-out',
-        'gradient': 'gradient 3s linear infinite',
+      letterSpacing: {
+        tightish: '-0.015em',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        scaleIn: {
-          '0%': { transform: 'scale(0.95)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        gradient: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
+      maxWidth: {
+        prose: '68ch',
       },
     },
   },

@@ -2,7 +2,6 @@
 
 import Section, { SectionHeader } from '@/components/ui/Section';
 import AnimatedSection from '@/components/ui/AnimatedSection';
-import Card, { CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import Icon from '@/components/ui/Icon';
 import { EXPERIENCES } from '@/config/constants';
@@ -11,50 +10,40 @@ import { calculateExperience } from '@/lib/utils';
 export default function ExperienceSection() {
   return (
     <Section id="experience" className="bg-background-secondary">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <SectionHeader
             title="Experience"
-            subtitle="Production systems. Real users. Business impact."
+            subtitle="Production systems with real users — not demos."
           />
         </AnimatedSection>
 
-        <div className="space-y-8">
+        <div className="space-y-10">
           {EXPERIENCES.map((experience, index) => (
-            <AnimatedSection key={experience.company} delay={index * 0.1}>
-              <Card hover>
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle as="h3">{experience.company}</CardTitle>
-                      <p className="text-foreground-secondary mt-1">{experience.role}</p>
-                      <div className="flex flex-wrap items-center gap-2 mt-1">
-                        {experience.startDate && (
-                          <p className="text-foreground-tertiary text-sm">
-                            {calculateExperience(experience.startDate)}
-                          </p>
-                        )}
-                        {experience.location && (
-                          <>
-                            {experience.startDate && (
-                              <span className="text-foreground-tertiary text-sm">•</span>
-                            )}
-                            <p className="text-foreground-tertiary text-sm">
-                              {experience.location}
-                            </p>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                    <Icon name="server" className="text-primary" size={24} />
-                  </div>
-                </CardHeader>
+            <AnimatedSection key={experience.company} delay={index * 0.05}>
+              <div className="grid md:grid-cols-4 gap-6 md:gap-8">
+                <div className="md:col-span-1">
+                  <p className="text-foreground-tertiary text-sm">
+                    {experience.startDate && calculateExperience(experience.startDate)}
+                  </p>
+                  {experience.location && (
+                    <p className="text-foreground-tertiary text-sm mt-1">{experience.location}</p>
+                  )}
+                </div>
 
-                <CardContent>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-foreground-secondary mb-2 uppercase tracking-wide">
-                      Projects
-                    </h4>
+                <div className="md:col-span-3">
+                  <div className="flex items-center gap-3 mb-1">
+                    <h3 className="font-serif text-xl font-medium tracking-tightish text-foreground">
+                      {experience.company}
+                    </h3>
+                    <span className="text-foreground-tertiary">·</span>
+                    <span className="text-foreground-secondary">{experience.role}</span>
+                  </div>
+
+                  <div className="mb-5">
+                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-foreground-tertiary mb-2">
+                      Shipped
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {experience.projects.map((project) => (
                         <Badge key={project.label} variant="primary">
@@ -75,34 +64,27 @@ export default function ExperienceSection() {
                     </div>
                   </div>
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-foreground-secondary mb-3 uppercase tracking-wide">
-                      Responsibilities
-                    </h4>
-                    <ul className="space-y-2">
-                      {experience.responsibilities.map((responsibility, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-foreground-secondary">
-                          <Icon name="check-circle" className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                          <span>{responsibility}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-2 mb-5">
+                    {experience.responsibilities.map((responsibility, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-foreground-secondary text-[15px]">
+                        <Icon name="arrow-right" className="text-primary mt-1 flex-shrink-0" size={14} />
+                        <span>{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {experience.technologies && (
-                    <div>
-                      <h4 className="text-sm font-semibold text-foreground-secondary mb-2 uppercase tracking-wide">
-                        Technologies
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {experience.technologies.map((tech) => (
-                          <Badge key={tech}>{tech}</Badge>
-                        ))}
-                      </div>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((tech) => (
+                        <Badge key={tech}>{tech}</Badge>
+                      ))}
                     </div>
                   )}
-                </CardContent>
-              </Card>
+                </div>
+              </div>
+              {index < EXPERIENCES.length - 1 && (
+                <div className="mt-10 border-t border-border" />
+              )}
             </AnimatedSection>
           ))}
         </div>

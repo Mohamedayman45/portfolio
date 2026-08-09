@@ -36,10 +36,10 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-[100] transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-[100] transition-colors duration-300',
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-background/90 backdrop-blur-sm border-b border-border'
+          : 'bg-transparent border-b border-transparent'
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,12 +50,12 @@ export default function Header() {
               e.preventDefault();
               window.scrollTo({ top: 0 });
             }}
-            className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+            className="font-serif text-lg font-medium tracking-tightish text-foreground hover:text-primary transition-colors"
           >
-            MA
+            Mohamed Ayman
           </a>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
@@ -64,13 +64,14 @@ export default function Header() {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="text-foreground-secondary hover:text-foreground transition-colors text-sm font-medium"
+                className="text-foreground-secondary hover:text-foreground transition-colors text-sm"
               >
                 {item.label}
               </a>
             ))}
             <Button
               size="sm"
+              variant="outline"
               onClick={() => window.open(PERSONAL_INFO.cv, '_blank')}
             >
               Resume
@@ -82,13 +83,13 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Icon name={isMobileMenuOpen ? 'x' : 'menu'} size={24} />
+            <Icon name={isMobileMenuOpen ? 'x' : 'menu'} size={22} />
           </button>
         </div>
 
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-3">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.href}
@@ -97,13 +98,14 @@ export default function Header() {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className="text-foreground-secondary hover:text-foreground transition-colors text-sm font-medium"
+                  className="text-foreground-secondary hover:text-foreground transition-colors text-sm py-1"
                 >
                   {item.label}
                 </a>
               ))}
               <Button
                 size="sm"
+                variant="outline"
                 onClick={() => window.open(PERSONAL_INFO.cv, '_blank')}
                 className="w-full"
               >

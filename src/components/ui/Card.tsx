@@ -10,8 +10,8 @@ export default function Card({ children, hover = false, className, ...props }: C
   return (
     <div
       className={cn(
-        'bg-background-secondary border border-border rounded-xl p-6',
-        hover && 'transition-all duration-300 hover:border-border-hover hover:shadow-lg hover:shadow-primary/5',
+        'bg-background border border-border rounded-lg p-6',
+        hover && 'transition-colors duration-200 hover:border-border-hover',
         className
       )}
       {...props}
@@ -40,7 +40,10 @@ interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
 
 export function CardTitle({ children, as: Component = 'h3', className, ...props }: CardTitleProps) {
   return (
-    <Component className={cn('text-xl font-semibold text-foreground', className)} {...props}>
+    <Component
+      className={cn('font-serif text-xl font-medium tracking-tightish text-foreground', className)}
+      {...props}
+    >
       {children}
     </Component>
   );

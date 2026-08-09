@@ -206,23 +206,23 @@ export const PROJECTS: Project[] = [
 
 export const ENGINEERING_PRINCIPLES: EngineeringPrinciple[] = [
   {
-    title: 'Business-First Thinking',
-    description: 'Every technical decision maps to business impact. I evaluate solutions through the lens of cost, scalability, and user experience, not just code elegance.',
+    title: 'Start from the business',
+    description: 'A clean architecture that solves the wrong problem is still a failure. I read the business constraints first — cost, scale, UX — and let those drive the technical choice.',
     icon: 'target',
   },
   {
-    title: 'Proof Over Opinion',
-    description: 'Architectural proposals backed by benchmarks, PoCs, and load testing. I challenge assumptions with data, not gut feelings.',
+    title: 'Proof before opinions',
+    description: 'If I want to change an architecture, I build a PoC and benchmark it. "I think this will be faster" isn\'t an argument I bring to a review.',
     icon: 'bar-chart',
   },
   {
-    title: 'Trade-off Analysis',
-    description: 'No silver bullets. Every choice has costs. I explicitly document trade-offs: when to cache, when to go event-driven, when simplicity wins.',
+    title: 'Write down the trade-offs',
+    description: 'No option is free. When to cache, when to go event-driven, when to keep it boring — I document the reasoning so the team doesn\'t relitigate it later.',
     icon: 'scale',
   },
   {
-    title: 'Security as Engineering',
-    description: 'Security isn\'t an afterthought. It\'s baked into architecture decisions, authentication flows, and API design from day one. I focus on CIA principles: Confidentiality, Integrity, and Availability in every system I build.',
+    title: 'Security is part of the design',
+    description: 'Auth flows, rate limiting, threat modeling — these belong in the architecture, not a ticket at the end. Confidentiality, integrity, and availability are constraints I design against, not features I bolt on.',
     icon: 'shield',
   },
 ];
@@ -230,12 +230,12 @@ export const ENGINEERING_PRINCIPLES: EngineeringPrinciple[] = [
 export const ABOUT_CONTENT = {
   headline: 'Software Engineer',
   subheadline: 'Backend-Heavy Full-Stack • DevOps • Security-Minded Architect',
-  introduction: `I don't think in screens or endpoints. I think in systems. My work spans backend architecture, mobile platforms, and DevOps, with a strong focus on security principles (CIA: Confidentiality, Integrity, Availability). What defines my approach is how I connect technical decisions to business outcomes.`,
+  introduction: `I build backends for systems that have real users on them. Mostly Node.js and Go, mostly event-driven, always with one eye on security and the other on what the business actually needs.`,
   paragraphs: [
-    `I've worked on production systems serving real users: real-time messaging backends, travel platforms, and mobile applications. These aren't demos. They're live systems where performance, security, and scalability aren't optional.`,
-    `My background in Computer Science and Cybersecurity shapes how I engineer. I don't just build features. I model threats, ensure CIA principles (Confidentiality, Integrity, Availability), benchmark alternatives, and challenge architecture when the data demands it. When I proposed moving our messaging system to event-driven architecture, it wasn't theory. It was a PoC with benchmarks showing 10x improvement.`,
-    `I focus on the big picture: understanding the business problem, evaluating trade-offs, and choosing solutions that scale. Whether it's implementing Domain Driven Design for complex domains, optimizing query performance, or hardening authentication flows against attacks, I approach engineering as a discipline of informed decision-making.`,
-    `I believe in proof over opinion, trade-off analysis over dogma, and systems thinking over task completion. If you're building something that matters, I'm interested.`,
+    `The work I care about is the kind that has to stay up. Real-time messaging, travel platforms, mobile apps with paying customers — places where latency, security, and correctness aren't nice-to-haves.`,
+    `I studied Computer Science with a focus on cybersecurity, and that shapes how I read a system. Before I write a feature I want to know where it can fail, who can abuse it, and what it costs to run. When our chat backend started choking under load, I didn't argue for a rewrite on instinct — I built a PoC, benchmarked it, and showed a 10x improvement before anyone touched production.`,
+    `Most of my decisions come down to trade-offs. When to go event-driven, when to keep it simple, when to cache, when to normalize. I try to write those trade-offs down so the next person doesn't have to re-derive them.`,
+    `If the problem is interesting and the team cares about doing it right, I'm in.`,
   ],
 };
 
